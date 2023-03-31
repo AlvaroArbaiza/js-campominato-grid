@@ -20,7 +20,7 @@ main {
 }
 
 
-/* HEADER */
+/* --------------------------- HEADER --------------------------- */
 header .container {
     width: 90%;
     height: 100%;
@@ -39,4 +39,52 @@ header .container #left-header a {
 header .container #left-header #titolo {
     margin: auto 0;
     font-size: 30px;
+}
+
+/* HEADER - Right side */
+header .container #right-header {
+    display: flex;
+}
+
+/* Difficoltà */
+header .container #right-header div:has(label, select),
+header .container #right-header div:has(a) {
+    margin: auto 0 auto 20px;
+}
+
+/* Button play */
+header .container #right-header a {
+    padding: 10px 20px;
+    background-color: greenyellow;
+    color: black;
+    font-size: 25px;
+    font-weight: 900;
+    text-decoration: none;
+    border: 2px solid black;
+}
+
+/* --------------------------- MAIN --------------------------- */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Griglia */
+main #griglia {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Boxes */
+main #griglia .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% / 10);
+    aspect-ratio: 1;
+    padding: 15px;
+    border: 1px solid black;
+    background-color: coral;
 }
