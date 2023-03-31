@@ -16,15 +16,34 @@ Bonus extra :
 */
 
 // Creo una variabile per selezionare il div #griglia
-let griglia = document.querySelector( "#griglia");
+const griglia = document.querySelector( `#griglia`);
 
-// Creo l'elemento div
-const div = document.createElement("div");
+// Funzione per creare elemento div="box"
+function creoDiv( elemento, classe, testo ) {
 
-// Aggiungo a div la classe .box
-let divBox = div.classList.add("box");
+    // Creo l'elemento div
+    const div = document.createElement(elemento);
+
+    // Aggiungo del testo
+    div.innerText = testo
+    
+    // Aggiungo a div la classe .box
+    div.classList.add(classe);
+
+    return div;
+}
+
 
 // Creo un ciclo per generare una serie sequenziale di numeri da 1 a 100
-for (i = 1; i <= 100; i++) {
+for ( let i = 1; i <= 100; i++ ) {
     
+    let scatola = creoDiv( `div`, `box`, i )
+
+    scatola.addEventListener( `click`, function () {
+
+        this.classList.add("luca");
+        console.log(`luca`)
+    } )
+
+    griglia.append(scatola)
 }

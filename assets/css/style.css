@@ -88,3 +88,8 @@ main #griglia .box {
     border: 1px solid black;
     background-color: coral;
 }
+
+main #griglia .luca {
+    background-color: rgb(199, 0, 0);
+}
+
