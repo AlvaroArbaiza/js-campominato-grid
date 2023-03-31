@@ -14,3 +14,17 @@ Bonus :
 Bonus extra :
     - Aggiungere la versione dark mode
 */
+
+// Creo una variabile per selezionare il div #griglia
+let griglia = document.querySelector( "#griglia");
+
+// Creo l'elemento div
+const div = document.createElement("div");
+
+// Aggiungo a div la classe .box
+let divBox = div.classList.add("box");
+
+// Creo un ciclo per generare una serie sequenziale di numeri da 1 a 100
+for (i = 1; i <= 100; i++) {
+    
+}
