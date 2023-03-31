@@ -34,43 +34,81 @@ function creoDiv( elemento, classe, testo ) {
 }
 
 // Creo un ciclo per generare una serie sequenziale di numeri da 1 a 100
-for ( let i = 1; i <= 81; i++ ) {
+// for ( let i = 1; i <= 100; i++ ) {
     
-    let scatola = creoDiv( `div`, `box_easy`, i )
+//     let scatola = creoDiv( `div`, `box_easy`, i )
 
-    // Evento al click che cambia di colore i box dentro la griglia
-    scatola.addEventListener( `click`, function () {
+//     // Evento al click che cambia di colore i box dentro la griglia
+//     scatola.addEventListener( `click`, function () {
 
-        this.classList.toggle("luca");
-        console.log(`luca`)
-    })
+//         this.classList.toggle("luca");
+//         console.log(`luca`)
+//     })
 
-    griglia.append(scatola)
-}
+//     griglia.append(scatola)
+// }
 
 
 // Devo fare in modo che il valore selezionato, al click sul button Play, mi cambi il for
 
-// Definisco la variabile per select
-let difficoltA = document.getElementById("difficolta").value;
-
 // Definisco la variabile per il button Play
 let play = document.getElementById("play");
 
-// Creo le condizioni
-if ( difficoltA == "medium" ) {
+play.addEventListener( `click`, function() {
+    
+    griglia.innerHTML = ""
 
-    for ( let i = 1; i <= 100; i++ ) {
+    // Definisco la variabile per select
+    let difficoltA = document.getElementById("difficolta").value;
+
+    console.log(difficoltA)
+
+    // Creo le condizioni
+    if ( difficoltA == "easy" ) {
+
+        for ( let i = 1; i <= 100; i++ ) {
+        
+            let scatola = creoDiv( `div`, `box_easy`, i )
+        
+            // Evento al click che cambia di colore i box dentro la griglia
+            scatola.addEventListener( `click`, function () {
+        
+                this.classList.toggle("selected");
+                console.log(`selected`)
+            })
+        
+            griglia.append(scatola)
+        }
+
+    } else if ( difficoltA == "medium" ) {
     
-        let scatola = creoDiv( `div`, `box_medium`, i )
+        for ( let i = 1; i <= 81; i++ ) {
+        
+            let scatola = creoDiv( `div`, `box_medium`, i )
+        
+            // Evento al click che cambia di colore i box dentro la griglia
+            scatola.addEventListener( `click`, function () {
+        
+                this.classList.toggle("selected");
+                console.log(`selected`)
+            })
+        
+            griglia.append(scatola)
+        }
+    } else if ( difficoltA == "hard" ) {
     
-        // Evento al click che cambia di colore i box dentro la griglia
-        scatola.addEventListener( `click`, function () {
-    
-            this.classList.toggle("luca");
-            console.log(`luca`)
-        })
-    
-        griglia.append(scatola)
+        for ( let i = 1; i <= 49; i++ ) {
+        
+            let scatola = creoDiv( `div`, `box_hardcore`, i )
+        
+            // Evento al click che cambia di colore i box dentro la griglia
+            scatola.addEventListener( `click`, function () {
+        
+                this.classList.toggle("selected");
+                console.log(`selected`)
+            })
+        
+            griglia.append(scatola)
+        }
     }
-}
+})

@@ -11,7 +11,7 @@ img {
 
 header {
     width: 100vw;
-    height: 90px;
+    height: 80px;
     background-color: aquamarine;
 }
 
@@ -38,7 +38,7 @@ header .container #left-header a {
 }
 header .container #left-header #titolo {
     margin: auto 0;
-    font-size: 30px;
+    font-size: 26px;
 }
 
 /* HEADER - Right side */
@@ -68,11 +68,12 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 40px 0;
 }
 
 /* Griglia */
 main #griglia {
-    width: 70%;
+    width: 40%;
     display: flex;
     flex-wrap: wrap;
 }
@@ -113,7 +114,19 @@ main #griglia .box_hardcore {
     background-color: coral;
 }
 
-main #griglia .luca {
+main #griglia .selected {
     background-color: rgb(199, 0, 0);
 }
 
+/* --------------------------- FOOTER --------------------------- */
+footer {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer div:has(span) {
+    width: 90%;
+}
