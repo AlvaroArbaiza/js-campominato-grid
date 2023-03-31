@@ -33,17 +33,44 @@ function creoDiv( elemento, classe, testo ) {
     return div;
 }
 
-
 // Creo un ciclo per generare una serie sequenziale di numeri da 1 a 100
-for ( let i = 1; i <= 100; i++ ) {
+for ( let i = 1; i <= 81; i++ ) {
     
-    let scatola = creoDiv( `div`, `box`, i )
+    let scatola = creoDiv( `div`, `box_easy`, i )
 
+    // Evento al click che cambia di colore i box dentro la griglia
     scatola.addEventListener( `click`, function () {
 
-        this.classList.add("luca");
+        this.classList.toggle("luca");
         console.log(`luca`)
-    } )
+    })
 
     griglia.append(scatola)
+}
+
+
+// Devo fare in modo che il valore selezionato, al click sul button Play, mi cambi il for
+
+// Definisco la variabile per select
+let difficoltA = document.getElementById("difficolta").value;
+
+// Definisco la variabile per il button Play
+let play = document.getElementById("play");
+
+// Creo le condizioni
+if ( difficoltA == "medium" ) {
+
+    for ( let i = 1; i <= 100; i++ ) {
+    
+        let scatola = creoDiv( `div`, `box_medium`, i )
+    
+        // Evento al click che cambia di colore i box dentro la griglia
+        scatola.addEventListener( `click`, function () {
+    
+            this.classList.toggle("luca");
+            console.log(`luca`)
+        })
+    
+        griglia.append(scatola)
+    }
 }

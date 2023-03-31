@@ -77,14 +77,38 @@ main #griglia {
     flex-wrap: wrap;
 }
 
-/* Boxes */
-main #griglia .box {
+/* Boxes - Easy mode*/
+main #griglia .box_easy {
     display: flex;
     justify-content: center;
     align-items: center;
     width: calc(100% / 10);
     aspect-ratio: 1;
     padding: 15px;
+    border: 1px solid black;
+    background-color: coral;
+}
+
+/* Boxes - Medium mode*/
+main #griglia .box_medium {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% / 9);
+    aspect-ratio: 1;
+    padding: 20px;
+    border: 1px solid black;
+    background-color: coral;
+}
+
+/* Boxes - Hardcore mode*/
+main #griglia .box_hardcore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% / 7);
+    aspect-ratio: 1;
+    padding: 25px;
     border: 1px solid black;
     background-color: coral;
 }
