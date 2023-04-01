@@ -7,6 +7,10 @@
     
     <!-- Css -->
     <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <title>Campo minato</title>
 </head>
 <body>
@@ -31,14 +35,24 @@
             <div id="right-header">
 
                 <!-- Difficoltà -->
-                <div>
+                <div id="container-difficolta">
                     
-                    <label for="difficoltà">Difficoltà:</label>
-                    <select name="difficoltà" id="difficolta">
-                        <option value="easy">Easy</option>
-                        <option value="medium">Medium</option>
-                        <option value="hard">Hard</option>
-                    </select>            
+                    <label for="difficoltà">Scegli la difficoltà:</label>
+                    
+                    <!-- Menu icon -->
+                    <div id="menu-difficolta">
+                        <div id="square-menu">
+
+                            <div>
+                                <i class="fa-solid fa-skull"></i>
+                            </div>
+                            <select name="difficoltà" id="difficolta">
+                                <option value="easy">Easy</option>
+                                <option value="medium">Medium</option>
+                                <option value="hard">Hard</option>
+                            </select>            
+                        </div>
+                    </div>
                 </div>
         
                 <!-- Button play -->

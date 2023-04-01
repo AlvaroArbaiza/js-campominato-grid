@@ -2,6 +2,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 img {
@@ -12,11 +13,10 @@ img {
 header {
     width: 100vw;
     height: 80px;
-    background-color: aquamarine;
 }
 
 main {
-    background-color: cadetblue;
+    background-color: whitesmoke;
 }
 
 
@@ -47,21 +47,69 @@ header .container #right-header {
 }
 
 /* Difficoltà */
-header .container #right-header div:has(label, select),
+header .container #right-header div:has( #mode),
 header .container #right-header div:has(a) {
-    margin: auto 0 auto 20px;
+    margin: auto 0 auto 60px;
 }
 
+header .container #right-header #container-difficolta {
+    display: flex;
+    align-items: center;
+}
+
+/* Label */
+header .container #right-header label {
+    font-size: 20px;
+}
+
+/* Menu icon */
+header .container #right-header #menu-difficolta {
+    display: flex;
+    align-items: center;
+    height: 80px;
+}
+header .container #right-header #square-menu {
+    display: flex;
+    text-align: center;
+    position: relative;
+    font-size: 25px;
+    margin-left: 30px;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    border: 3px solid;
+    
+}
+
+/* Select */
+header .container #right-header select {
+    position: absolute;
+    display: none;
+    top: -2px;
+    left: -10px;
+}
+
+/* Menu icon hover */
+header .container #right-header #container-difficolta:hover select {
+    display: flex;
+    font-weight: 800;
+    color: black;
+    padding: 17px 0;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+}
 /* Button play */
 header .container #right-header a {
     padding: 10px 20px;
-    background-color: greenyellow;
-    color: black;
     font-size: 25px;
     font-weight: 900;
     text-decoration: none;
-    border: 2px solid black;
+    cursor: pointer;
+    color: black;
+    border: 3px solid black;
+    background-color: greenyellow;
 }
+
 
 /* --------------------------- MAIN --------------------------- */
 main {
@@ -87,7 +135,7 @@ main #griglia .box_easy {
     aspect-ratio: 1;
     padding: 15px;
     border: 1px solid black;
-    background-color: coral;
+    background-color: springgreen;
 }
 
 /* Boxes - Medium mode*/
@@ -99,7 +147,7 @@ main #griglia .box_medium {
     aspect-ratio: 1;
     padding: 20px;
     border: 1px solid black;
-    background-color: coral;
+    background-color: springgreen;
 }
 
 /* Boxes - Hardcore mode*/
@@ -111,11 +159,11 @@ main #griglia .box_hardcore {
     aspect-ratio: 1;
     padding: 25px;
     border: 1px solid black;
-    background-color: coral;
+    background-color: springgreen;
 }
 
 main #griglia .selected {
-    background-color: rgb(199, 0, 0);
+    background-color: darkorange;
 }
 
 /* --------------------------- FOOTER --------------------------- */
