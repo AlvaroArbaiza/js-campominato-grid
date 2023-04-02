@@ -5,20 +5,58 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-img {
-    max-width: 100%;
-    height: 100%;
+:root {
+    --bgHeader: white;
+    --bgMain: whitesmoke;
+    --bgPlay: greenyellow;
+    --colorHeader: black;
+    --borderColor: black;
+    --bgBox: springgreen;
+    --bgBoxSelected: darkorange;
 }
 
 header {
     width: 100vw;
     height: 80px;
+    background-color: var(--bgHeader);
+    color: var(--colorHeader);
 }
 
 main {
-    background-color: whitesmoke;
+    background-color: var(--bgMain);
 }
 
+img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Display: Flex */
+header .container #left-header,
+header .container #right-header,
+header .container #right-header #container-difficolta,
+header .container #right-header #menu-difficolta,
+header .container #right-header #square-menu,
+main,
+main #griglia,
+main #griglia .box_easy,
+main #griglia .box_medium,
+main #griglia .box_hardcore,
+footer  {
+    display: flex;    
+}
+
+/* Align items: Center */
+header .container #right-header #container-difficolta,
+header .container #right-header #menu-difficolta,
+main,
+main #griglia .box_easy,
+main #griglia .box_medium,
+main #griglia .box_hardcore,
+footer {
+    align-items: center;
+}
 
 /* --------------------------- HEADER --------------------------- */
 header .container {
@@ -30,11 +68,9 @@ header .container {
 }
 
 /* HEADER - Left side */
-header .container #left-header {
-    display: flex;    
-}
 header .container #left-header a {
     max-width: 100px;
+    padding: 12px;
 }
 header .container #left-header #titolo {
     margin: auto 0;
@@ -42,19 +78,22 @@ header .container #left-header #titolo {
 }
 
 /* HEADER - Right side */
-header .container #right-header {
+/* Darkmode */
+header .container #right-header #darkMode {
+    width: 50px;
+    height: 80px;
+    text-align: center;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+    font-size: 30px;
 }
 
 /* Difficoltà */
 header .container #right-header div:has( #mode),
 header .container #right-header div:has(a) {
     margin: auto 0 auto 60px;
-}
-
-header .container #right-header #container-difficolta {
-    display: flex;
-    align-items: center;
 }
 
 /* Label */
@@ -64,12 +103,9 @@ header .container #right-header label {
 
 /* Menu icon */
 header .container #right-header #menu-difficolta {
-    display: flex;
-    align-items: center;
     height: 80px;
 }
 header .container #right-header #square-menu {
-    display: flex;
     text-align: center;
     position: relative;
     font-size: 25px;
@@ -90,7 +126,7 @@ header .container #right-header select {
 }
 
 /* Menu icon hover */
-header .container #right-header #container-difficolta:hover select {
+header .container #right-header #menu-difficolta:hover select {
     display: flex;
     font-weight: 800;
     color: black;
@@ -105,74 +141,64 @@ header .container #right-header a {
     font-weight: 900;
     text-decoration: none;
     cursor: pointer;
-    color: black;
-    border: 3px solid black;
-    background-color: greenyellow;
+    color: var(--colorHeader);
+    border: 3px solid var(--borderColor);
+    background-color: var(--bgPlay);
 }
 
 
 /* --------------------------- MAIN --------------------------- */
-main {
-    display: flex;
+main {    
     justify-content: center;
-    align-items: center;
     padding: 40px 0;
 }
 
 /* Griglia */
 main #griglia {
     width: 40%;
-    display: flex;
     flex-wrap: wrap;
+}
+
+/* Boxes */
+main #griglia .box_easy,
+main #griglia .box_medium,
+main #griglia .box_hardcore {
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid var(--borderColor);
+    background-color: var(--bgBox);
 }
 
 /* Boxes - Easy mode*/
 main #griglia .box_easy {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: calc(100% / 10);
     aspect-ratio: 1;
     padding: 15px;
-    border: 1px solid black;
-    background-color: springgreen;
 }
 
 /* Boxes - Medium mode*/
 main #griglia .box_medium {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: calc(100% / 9);
     aspect-ratio: 1;
     padding: 20px;
-    border: 1px solid black;
-    background-color: springgreen;
 }
 
 /* Boxes - Hardcore mode*/
 main #griglia .box_hardcore {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: calc(100% / 7);
     aspect-ratio: 1;
     padding: 25px;
-    border: 1px solid black;
-    background-color: springgreen;
 }
 
 main #griglia .selected {
-    background-color: darkorange;
+    background-color: var(--bgBoxSelected);
 }
 
 /* --------------------------- FOOTER --------------------------- */
 footer {
     width: 100%;
     height: 50px;
-    display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 footer div:has(span) {

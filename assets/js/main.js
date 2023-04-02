@@ -36,8 +36,10 @@ function creoDiv( elemento, classe, testo ) {
 // Definisco la variabile per il button Play
 let play = document.getElementById("play");
 
+// Aggiungo una funziona al click
 play.addEventListener( `click`, function() {
     
+    // Aggiungo questo spazio di default
     griglia.innerHTML = ""
     
     // Definisco la variabile per select
@@ -93,5 +95,42 @@ play.addEventListener( `click`, function() {
         
             griglia.append(scatola)
         }
+    }
+})
+
+/* DARK MODE */
+// Seleziono l'elemento root
+const root = document.querySelector(`:root`);
+
+let darkMode = false;
+
+// Creiamo la funzione che al click cambierà i valore all'interno di :root
+function myFunction() {
+    root.style.setProperty(`--bgHeader`, `black`);
+    root.style.setProperty(`--bgMain`, `black`);
+    root.style.setProperty(`--bgPlay`, `black`);
+    root.style.setProperty(`--colorHeader`, `white`);
+    root.style.setProperty(`--borderColor`, `white`);
+    root.style.setProperty(`--bgBox`, `white`);
+    root.style.setProperty(`--bgBoxSelected`, `red`);
+}
+
+// Targhettizziamo l'elemento darkMode e aggiungiamo un evento al click
+document.getElementById(`darkMode`).addEventListener( `click`, function() {
+
+    // Creiamo una serie di condizioni per la quale ogni volta verra attivato e non
+    if (!darkMode) {
+        
+        myFunction()
+        darkMode = true;
+    } else {
+        root.style.setProperty(`--bgHeader`, `white`);
+        root.style.setProperty(`--bgMain`, `whitesmoke`);
+        root.style.setProperty(`--bgPlay`, `greenyellow`);
+        root.style.setProperty(`--colorHeader`, `black`);
+        root.style.setProperty(`--borderColor`, `black`);
+        root.style.setProperty(`--bgBox`, `springgreen`);
+        root.style.setProperty(`--bgBoxSelected`, `darkorange`);
+        darkMode = false;
     }
 })
