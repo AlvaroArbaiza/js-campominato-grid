@@ -6,20 +6,20 @@
 }
 
 :root {
-    --bgHeader: white;
+    --bgWhite: white;
     --bgMain: whitesmoke;
     --bgPlay: greenyellow;
-    --colorHeader: black;
+    --colorBlack: black;
     --borderColor: black;
     --bgBox: springgreen;
     --bgBoxSelected: darkorange;
 }
 
 header {
-    width: 100vw;
+    width: 100%;
     height: 80px;
-    background-color: var(--bgHeader);
-    color: var(--colorHeader);
+    background-color: var(--bgWhite);
+    color: var(--colorBlack);
 }
 
 main {
@@ -141,7 +141,7 @@ header .container #right-header a {
     font-weight: 900;
     text-decoration: none;
     cursor: pointer;
-    color: var(--colorHeader);
+    color: var(--colorBlack);
     border: 3px solid var(--borderColor);
     background-color: var(--bgPlay);
 }
@@ -199,8 +199,14 @@ footer {
     width: 100%;
     height: 50px;
     justify-content: center;
+    color: var(--colorBlack);
+    background-color: var(--bgWhite);
 }
 
 footer div:has(span) {
     width: 90%;
+}
+
+footer div span a {
+    color: blue;
 }

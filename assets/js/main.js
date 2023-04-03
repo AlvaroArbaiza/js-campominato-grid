@@ -106,10 +106,10 @@ let darkMode = false;
 
 // Creiamo la funzione che al click cambierà i valore all'interno di :root
 function myFunction() {
-    root.style.setProperty(`--bgHeader`, `black`);
+    root.style.setProperty(`--bgWhite`, `black`);
     root.style.setProperty(`--bgMain`, `black`);
     root.style.setProperty(`--bgPlay`, `black`);
-    root.style.setProperty(`--colorHeader`, `white`);
+    root.style.setProperty(`--colorBlack`, `white`);
     root.style.setProperty(`--borderColor`, `white`);
     root.style.setProperty(`--bgBox`, `white`);
     root.style.setProperty(`--bgBoxSelected`, `red`);
@@ -124,10 +124,10 @@ document.getElementById(`darkMode`).addEventListener( `click`, function() {
         myFunction()
         darkMode = true;
     } else {
-        root.style.setProperty(`--bgHeader`, `white`);
+        root.style.setProperty(`--bgWhite`, `white`);
         root.style.setProperty(`--bgMain`, `whitesmoke`);
         root.style.setProperty(`--bgPlay`, `greenyellow`);
-        root.style.setProperty(`--colorHeader`, `black`);
+        root.style.setProperty(`--colorBlack`, `black`);
         root.style.setProperty(`--borderColor`, `black`);
         root.style.setProperty(`--bgBox`, `springgreen`);
         root.style.setProperty(`--bgBoxSelected`, `darkorange`);
